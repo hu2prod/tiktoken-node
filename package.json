@@ -30,6 +30,7 @@
     "scripts": {
         "build:debug": "napi build --platform --no-dts-header --js false --dts ../index.d.ts ./dist",
         "build": "npm run build:debug -- --release",
+        "install": "npm run build",
         "format": "cargo fmt"
     },
     "repository": {
