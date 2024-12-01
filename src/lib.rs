@@ -21,7 +21,7 @@ impl Encoding {
     pub fn decode(&self, tokens: Vec<u32>) -> Result<String, Error> {
         match self
             .encoding
-            .decode(tokens.iter().map(|x| *x as usize).collect())
+            .decode(tokens)
         {
             Ok(text) => Ok(text),
             Err(err) => Err(Error::from_reason(err.to_string())),
